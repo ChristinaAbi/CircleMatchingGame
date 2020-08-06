@@ -9,8 +9,9 @@ The approach taken to complete this game was a "thinking with the end in mind" a
 
 Unsolved Problems
 
-Some unsolved problems I faced were separating the properties applied to the back and front of the card, getting the computer to flip the card it randomly chose based on the cardArray, and getting the DOM to realize that the user has clicked two cards, simulating an entire turn.
+Some unsolved problems faced were separating the properties applied to the back and front of the card, getting the computer to flip the card it randomly chose based on the cardArray, and programming the DOM to realize that the user has clicked two cards, simulating an entire turn.
 
 Future updates:
+Some future updates in the works are making the cards flip back over when the player or computer doesn't have a match, increasing the amount of cards, along with different styling.
 
 */
