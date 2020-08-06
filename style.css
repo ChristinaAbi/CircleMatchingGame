@@ -1,7 +1,12 @@
+body{
+	background-image: url(https://i.ibb.co/hXqWwh0/Screen-Shot-2020-08-06-at-12-39-35-AM.png);
+}
+
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 
@@ -19,8 +24,8 @@
 }
 
 #instruction-box {
-background-color: rgb(253,235,208);
-height: 250px;
+background-color: rgb(221, 125, 96);
+height: 150px;
 width:550px;
 border-radius: 2px;
 margin: 150px auto;
@@ -30,8 +35,8 @@ text-align: center;
 .card {
 	flex-basis: 8em;
   	height: 12em;
-  	border: 1px solid red;
-  	background: #e7b872;
+  	border: 1px solid black;
+  	background: #bee772;
   	box-shadow: 2px 2px 4px grey;
   	display: block;
   	border-radius: 7%; 	
@@ -45,9 +50,7 @@ text-align: center;
 	grid-area: bottom;
 }
 
-
-
-#circle-one {
+/* #circle-one {
 	background: pink;
 	backface-visibility: hidden;
     border-radius: 50%;
@@ -88,12 +91,12 @@ text-align: center;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-}
+} */
 
 .card-back  {
   background-size: 100px 100px;
-  background-color: whitesmoke;
-  color: rgba(0,0,0,0);
+  background-color: rgb(148, 141, 243);
+  color: rgba(126, 31, 31, 0);
 }
  
  
