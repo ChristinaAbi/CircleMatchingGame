@@ -1,0 +1,99 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+    overflow: auto;
+    display: none;
+}
+
+#instruction-box {
+background-color: rgb(253,235,208);
+height: 250px;
+width:550px;
+border-radius: 2px;
+margin: 150px auto;
+text-align: center;
+}
+
+.card {
+	flex-basis: 8em;
+  	height: 12em;
+  	border: 1px solid red;
+  	background: #e7b872;
+  	box-shadow: 2px 2px 4px grey;
+  	display: block;
+  	border-radius: 7%; 	
+}
+
+.top {
+	grid-area: top;
+}
+
+.bottom {
+	grid-area: bottom;
+}
+
+
+
+#circle-one {
+	background: pink;
+	backface-visibility: hidden;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#circle-two {
+	background: yellow;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#circle-three {
+	background: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#circle-four {
+	background: lightskyblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#circle-five {
+	background: aqua;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#circle-six {
+	background:orchid;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.card-back  {
+  background-size: 100px 100px;
+  background-color: whitesmoke;
+  color: rgba(0,0,0,0);
+}
+ 
+ 
