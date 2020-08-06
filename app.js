@@ -63,9 +63,9 @@ const changeDisplayValue = (event, selector, displayValue) => {
     $item.css('display', displayValue);
   }
 
-// const $flipCard = $('.card-back').on('click', (event) => {
-//     $(event.currentTarget).toggleClass('card')
-// })
+const $flipCard = $('.card-back').on('click', (event) => {
+    $(event.currentTarget).toggleClass('card')
+})
 
 $(() => {
     const $card = $('.card').on('click', (event) => {
