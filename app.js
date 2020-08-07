@@ -63,9 +63,9 @@ const changeDisplayValue = (event, selector, displayValue) => {
     $item.css('display', displayValue);
   }
 
-const $flipCard = $('.card-back').on('click', (event) => {
-    $(event.currentTarget).toggleClass('card')
-})
+// const $flipCard = $('.card-back').on('click', (event) => {
+//     $(event.currentTarget).toggleClass('card')
+// })
 
 $(() => {
     const $card = $('.card').on('click', (event) => {
@@ -107,7 +107,7 @@ const computer = {
     points: 0
 }
 
-const clickTracker = player.clicks++
+let clickTracker = player.clicks++
 if (player.clicks === 2) {
     computerFirstClick()
     computerSecondClick()
