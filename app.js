@@ -54,7 +54,9 @@ const cardsArray = [
     }
 ]
 
-// const $cards = $('.cards')
+const $cardsArray = $('<div id="cards">')
+
+$('body').append($cardsArray)
 
 //Event Varibles
 
