@@ -42,57 +42,11 @@ text-align: center;
   	border-radius: 7%; 	
 }
 
-.top {
-	grid-area: top;
+.top-card {
+	display: 100%;
+  	height: 12em;
+  	border-radius: 7%; 
 }
-
-.bottom {
-	grid-area: bottom;
-}
-
-/* #circle-one {
-	background: pink;
-	backface-visibility: hidden;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#circle-two {
-	background: yellow;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#circle-three {
-	background: red;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#circle-four {
-	background: lightskyblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#circle-five {
-	background: aqua;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-#circle-six {
-	background:orchid;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-} */
-
 .card-back  {
   /* background-size: 100px 100px;
   background-color: rgb(148, 141, 243);

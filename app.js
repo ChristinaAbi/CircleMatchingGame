@@ -1,63 +1,6 @@
 // console.log('app.js is working')
 // console.log($)
 
-// Card Array
-
-const cardsArray = [
-    {
-        number: 1,
-        color: 'pink',
-    },
-    {
-        number: 2,
-        color: 'yellow',
-    },
-    {
-        number: 3,
-        color: 'blue',
-    },
-    {
-        number: 4,
-        color: 'red',
-    },
-    {
-        number: 5,
-        color: 'aqua',
-    },
-    {
-        number: 6,
-        color: 'purple',
-    },
-    {
-        number: 7,
-        color: 'purple',
-    },
-    {
-        number: 8,
-        color: 'pink',
-    },
-    {
-        number: 9,
-        color: 'blue',
-    },
-    {
-        number: 10,
-        color: 'red',
-    },
-    {
-        number: 11,
-        color: 'yellow',
-    },
-    {
-        number: 12,
-        color: 'aqua',
-    }
-]
-
-const $cardsArray = $('<div id="cards">')
-
-$('body').append($cardsArray)
-
 //Event Varibles
 
 const changeDisplayValue = (event, selector, displayValue) => {
@@ -65,9 +8,9 @@ const changeDisplayValue = (event, selector, displayValue) => {
     $item.css('display', displayValue);
   }
 
-// const $flipCard = $('.card-back').on('click', (event) => {
-//     $(event.currentTarget).toggleClass('card')
-// })
+flipCard = $('.card-back').on('click', (event) => {
+    $(event.currentTarget).toggleClass('card')
+})
 
 $(() => {
     const $card = $('.card').on('click', (event) => {
@@ -171,7 +114,6 @@ const computerTurn = () => {
         playerTurn()
     }
 }
-
 const checkWin = () => {
     if (player.points > computer.points && player.points === 6) {
         alert(`You have won the Flower Memory Game! Your memory is sharp!`)
