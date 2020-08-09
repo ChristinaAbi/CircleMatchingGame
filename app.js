@@ -3,20 +3,60 @@
 
 //Event Varibles
 
+// Game Variables
+
+const player = {
+    points: 0,
+    clicks: 0,
+    selection: []
+}
+
+const computer = {
+    points: 0
+}
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+    card.addEventListener("click", handleClickEvent);
+});
+
+function handleClickEvent(event) {
+    console.log(event.target.parent);
+    player.selection.push(event.target.src);
+    let clickTracker = player.clicks++
+    if (player.clicks === 2) {
+        //compare the player's cards
+        playerTurn();
+        // computerFirstClick(cards)
+        // computerSecondClick(cards)
+    } else {
+        //playerFirstClick()
+        //playerSecondClick()
+    }
+
+}
+
+
+
+
+
+
+
 const changeDisplayValue = (event, selector, displayValue) => {
     const $item = $(selector);
     $item.css('display', displayValue);
   }
 
-flipCard = $('.card-back').on('click', (event) => {
-    $(event.currentTarget).toggleClass('card')
-})
+// flipCard = $('.card-back').on('click', (event) => {
+//     $(event.currentTarget).toggleClass('card')
+// })
 
-$(() => {
-    const $card = $('.card').on('click', (event) => {
-        $(event.currentTarget).toggleClass('card-back')
-    })
-})
+// $(() => {
+//     const $card = $('.card').on('click', (event) => {
+//         $(event.currentTarget).toggleClass('card-back')
+//     })
+// })
 
 const $instructionsButton = $('#instructions')
 
@@ -41,25 +81,7 @@ $instructionsButton.on('click', openModal)
 $closebutton.on('click', closeInstruction)
 
 
-// Game Variables
 
-const player = {
-    points: 0,
-    clicks: 0
-}
-
-const computer = {
-    points: 0
-}
-
-let clickTracker = player.clicks++
-if (player.clicks === 2) {
-    computerFirstClick()
-    computerSecondClick()
-} else {
-    playerFirstClick()
-    playerSecondClick()
-}
 
 const playerFirstClick = () => {
     const $card = $('.card').on('click', (event) => {
@@ -71,14 +93,20 @@ const playerSecondClick = () => {
     const $card = $('.card').on('click', (event) => {
        $(event.currentTarget).toggleClass('card-back')
     })
-
- const computerFirstClick = (cardsArray) => {
-     console.log(Math.floor(Math.random() * cardsArray.length))
+}
+                        //cardsArray = cards
+ const computerFirstClick = () => {
+     console.log(Math.floor(Math.random() * cards.length))
     }
 
- const computerSecondClick = (cardsArray) => {
-     console.log(Math.floor(Math.random() * cardsArray.length))
+ const computerSecondClick = () => {
+     console.log(Math.floor(Math.random() * cards.length))
  }
+
+const computerSelection = () => {
+    let selection = Math.floor(Math.random() * cards.length);
+    return selection;
+}
 
 // Game Functions
 // const startRound = () => {
@@ -86,32 +114,40 @@ const playerSecondClick = () => {
 // }
 const startGame = () => {
     alert(`Welcome to Flower Memory Game! Click on the instructions button to begin!`)
-    startRound()
+    //startRound()
 }
 
 // Game Methods
 
 const playerTurn = () => {
-    if (playerFirstClick === playerSecondClick) {
+    let firstChoice = player.selection[0];
+    let secondChoice = player.selection[1];
+    if (firstChoice === secondChoice) {
         player.points++
         alert(`You have won this round! You have ${player.points} points now!`)
-        computerTurn()
     } else {
         alert(`You do not have a match! Now it is the computer\'s turn`)
-        computerTurn()
     }
+    player.selection = [];
+    player.clicks = 0;
+    computerTurn();
 }
 
 const computerTurn = () => {
-    computerFirstClick()
-    computerSecondClick()
-    if (computerFirstClick === computerSecondClick) {
+    //computerFirstClick()
+    //computerSecondClick()
+    let firstChoice = computerSelection();
+    let secondChoice = computerSelection();
+    let firstCardNode = cards[firstChoice];
+    let secondCardNode = cards[secondChoice];
+    let firstCardImg = firstCardNode.querySelector("img");
+    let secondCardImg = secondCardNode.querySelector("img");
+    console.log(firstCardImg, secondCardImg);
+    if (firstCardImg.src === secondCardImg.src) {
         alert(`The computer has won this round!`)
         computer.points++
-        playerTurn()
     } else {
         alert(`The computer has lost this round!`)
-        playerTurn()
     }
 }
 const checkWin = () => {
@@ -127,5 +163,4 @@ const checkWin = () => {
 
 // Functions Invoked
 
-startGame()
-}
+//startGame();
