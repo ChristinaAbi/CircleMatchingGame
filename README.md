@@ -1,4 +1,4 @@
-# CircleMatchingGame
+# FlowerMatchingGame
 
 /*
 This is my first game fully created with HTML, CSS, JS, and JQuery.
