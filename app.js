@@ -80,9 +80,6 @@ $instructionsButton.on('click', openModal)
 
 $closebutton.on('click', closeInstruction)
 
-
-
-
 const playerFirstClick = () => {
     const $card = $('.card').on('click', (event) => {
        $(event.currentTarget).toggleClass('card-back')
